@@ -31,16 +31,25 @@ class MacbethQuotes:
             option = int(input())
         except:
             print("An error occurred! Make sure your putting in numbers within the given range!")
-        if option == 1:
-            self.easy()
-        elif option == 2:
-            self.normal()
-        elif option == 3:
-            self.hard()
-        elif option == 4:
-            self.leaderboard()
-        elif option == 5:
-            self.about()
+        picked = False
+        while not picked:
+            if option == 1:
+                self.easy()
+                picked = True
+            elif option == 2:
+                self.normal()
+                picked = True
+            elif option == 3:
+                self.hard()
+                picked = True
+            elif option == 4:
+                self.leaderboard()
+                picked = True
+            elif option == 5:
+                self.about()
+                picked = True
+            else:
+                print("An error occurred! Make sure your putting in numbers within the given range!")
 
 if __name__ == "__main__":
     MacbethQuotes()
